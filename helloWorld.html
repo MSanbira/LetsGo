@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        body {
+            text-align: center;
+            background-color: aqua;
+        }
+
+        #main {
+            border-width: 5px;
+            border-style: solid;
+            border-color: blue;
+            margin: 20px -50px 0px -50px;
+            background-color: aquamarine;
+        }
+
+        h1 {
+            padding: 50px 0px 0px 0px;
+            margin: 0px 0px -20px 0px;
+            font-size: 80px;
+            font-family: "Comic Sans MS";
+        }
+
+        h2 {
+            padding: 0px 0px 50px 0px;
+            margin: -80px 0px 0px 0px;
+            font-size: 40px;
+            font-family: "Comic Sans MS";
+        }
+
+        .smaller-img {
+            display: block;
+            margin: auto;
+            width: 50%;
+        }
+
+        #MB {
+            margin: -20px 0px 0px 0px;
+            padding: 0px 0px 20px 0px;
+        }
+
+        .col-xs-6 {
+            border: 2px solid blue;
+        }
+    </style>
+
+    <title>Welcome y'all</title>
+</head>
+
+<body>
+    <div id="main" class="container-fluid">
+        <h1>Hello World</h1>
+        <a href="https://www.warnerbros.com/archive/spacejam/movie/jam.htm" title="Click Here!">
+            <img class="smaller-img img-responsive" src="https://www.worldfutureenergysummit.com/__media/Homepage/2017-HIGHLIGHTS-PER-SHOW-07.png"
+                alt="world picture">
+        </a>
+        <h2>WazzUp?!?!</h2>
+
+        <audio id="myAudio">
+            <source src="Space-jam.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+        </audio>
+        <div id="MB" class="row">
+            <div class="col-xs-6">
+                <button class="btn btn-primary" onclick="playAudio()" type="button">Get It On!</button>
+            </div>
+            <div class="col-xs-6" style="border:5px solid red;">
+
+                <button class="btn btn-danger" onclick="pauseAudio()" type="button">STWAP!!!</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        var x = document.getElementById("myAudio");
+
+        function playAudio() {
+            x.play();
+        }
+        function pauseAudio() {
+            x.pause();
+        }
+        $(document).ready(function () {
+            $("h2").addClass("animated bounce");
+
+        });
+    </script>
+
+</body>
+
+</html>
